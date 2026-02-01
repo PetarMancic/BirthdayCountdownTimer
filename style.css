@@ -1,45 +1,61 @@
-@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Potta+One&display=swap");
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    background-image: url('./birthday.jpg');
-    background-size: cover;
-    background-position:center center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    font-family: 'Potta One', cursive;
-    margin: 0;
+  background-image: url("./birthday.jpg");
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Potta One", cursive;
+  margin: 0;
 }
 
 h1 {
-    font-weight: normal;
-    font-size: 4rem;
-    margin-top: 5rem;
+  font-weight: normal;
+  font-size: 4rem; /* osnovna veličina za desktop */
+  margin: 2rem 0; /* margin top i bottom, centrirano */
+  text-align: center; /* horizontalno centriran */
+  width: 100%; /* zauzima punu širinu, bitno za mobilne */
+}
+
+/* Responsive za manje ekrane */
+@media (max-width: 768px) {
+  h1 {
+    padding-top: 150px;;
+    font-size: 2rem; /* manja veličina fonta za mobilni */
+    margin: 1.5rem 0; /* manja margina */
+  }
+
+  .big-text {
+    font-size: 3rem; /* smanji i brojeve da stanu na ekran */
+    margin: 0.5rem 1rem;
+  }
 }
 
 .countdown-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .big-text {
-    font-weight: bold;
-    font-size: 6rem;
-    line-height: 1;
-    margin: 1rem 2rem;
+  font-weight: bold;
+  font-size: 6rem;
+  line-height: 1;
+  margin: 1rem 2rem;
 }
 
 .countdown-el {
-    text-align: center;
+  text-align: center;
 }
 
 .countdown-el span {
-    font-size: 1.3rem;
+  font-size: 1.3rem;
 }
